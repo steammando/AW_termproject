@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Easy Vote</title>
+    <title>EVER Vote</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -16,10 +16,16 @@
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/modern-business.css" rel="stylesheet">
-    
+    <script src="https://www.chartjs.org/dist/2.7.3/Chart.bundle.js"></script>
+    <script src = "https://www.chartjs.org/samples/latest/utils.js"></script>
     <style>
         select {width: 200px;
-                font-size: 8px;}
+                font-size: 10px;}
+        canvas {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
     </style>
 
 </head>
@@ -75,26 +81,79 @@
                                 
                               </div>
                               <!-- body -->
-                              <div class="modal-body">
-                                    태그를 입력해주세요.<br/>
-                                    <input type="text" placeholder="# vote code"/> <br><br>
+                                
+                              <table>
+                                  <tr>
+                                    <td>
+                                <div class="modal-body">태그를 입력해주세요.<br /> <input type="text" placeholder="# vote code" /> <br /><br /><select>
+                                        <option selected="selected" value="default">내 투표를 선택해 주세요</option>
+                                        <option value="vote 1">vote 1</option>
+                                        <option value="vote 2">vote 2</option>
+                                        <option value="vote 3">vote 3</option>
+                                        <option value="vote 4">vote 4</option>
+                                    </select><br /><select>
+                                        <option selected="selected" value="default">내가 참여한 투표를 선택해 주세요.</option>
+                                        <option value="vote 1">vote 1</option>
+                                        <option value="vote 2">vote 2</option>
+                                        <option value="vote 3">vote 3</option>
+                                        <option value="vote 4">vote 4</option>
+                                    </select></div>
+                                    </td>
+                                    <td>
+                                       
+                                <div class="modal-body">
                                     <select>
-                                        <option value="default" selected="true">내 투표를 선택해 주세요</option>
-                                        <option value = "vote 1">vote 1</option>
-                                        <option value = "vote 2">vote 2</option>
-                                        <option value = "vote 3">vote 3</option>
-                                        <option value = "vote 4">vote 4</option>
-                                    </select> <br>
-                                    
-                                    <select>
-                                        <option value = "default" selected="true">내가 참여한 투표를 선택해 주세요.</option>
-                                        <option value = "vote 1">vote 1</option>
-                                        <option value = "vote 2">vote 2</option>
-                                        <option value = "vote 3">vote 3</option>
-                                        <option value = "vote 4">vote 4</option>
-                                    </select>
-                                  
-                              </div>
+                                        <option selected="selected" value="default">제목</option>
+                                        <option value="vote 1">vote 1</option>
+                                        <option value="vote 2">vote 2</option>
+                                        <option value="vote 3">vote 3</option>
+                                        <option value="vote 4">vote 4</option>
+                                    </select> 
+                                    <canvas id="myChart"></canvas>
+                                        <script>
+                                    var ctx = document.getElementById("myChart").getContext('2d');
+                                    var myChart = new Chart(ctx, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                                            datasets: [{
+                                                label: '# of Votes',
+                                                data: [12, 19, 3, 5, 2, 3],
+                                                backgroundColor: [
+                                                    'rgba(255, 99, 132, 0.2)',
+                                                    'rgba(54, 162, 235, 0.2)',
+                                                    'rgba(255, 206, 86, 0.2)',
+                                                    'rgba(75, 192, 192, 0.2)',
+                                                    'rgba(153, 102, 255, 0.2)',
+                                                    'rgba(255, 159, 64, 0.2)'
+                                                ],
+                                                borderColor: [
+                                                    'rgba(255,99,132,1)',
+                                                    'rgba(54, 162, 235, 1)',
+                                                    'rgba(255, 206, 86, 1)',
+                                                    'rgba(75, 192, 192, 1)',
+                                                    'rgba(153, 102, 255, 1)',
+                                                    'rgba(255, 159, 64, 1)'
+                                                ],
+                                                borderWidth: 1
+                                            }]
+                                        },
+                                        options: {
+                                            scales: {
+                                                yAxes: [{
+                                                    ticks: {
+                                                        beginAtZero:true
+                                                    }
+                                                }]
+                                            }
+                                        }
+                                    });
+                                    </script>
+                                        
+                                        </div>
+                                    </td>
+                                  </tr>
+                                </table>
                               <!-- Footer -->
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
@@ -114,22 +173,19 @@
                       <!-- Slide One - Set the background image for this slide in the line below -->
                       <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
                         <div class="carousel-caption d-none d-md-block">
-                          <h3>First Slide</h3>
-                          <p>This is a description for the first slide.</p>
+                          <img src = "http://file2.nocutnews.co.kr/newsroom/image/2017/04/06/20170406152356364891.jpg" width = "100%" />
                         </div>
                       </div>
                       <!-- Slide Two - Set the background image for this slide in the line below -->
                       <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
                         <div class="carousel-caption d-none d-md-block">
-                          <h3>Second Slide</h3>
-                          <p>This is a description for the second slide.</p>
+                          <img src = "http://www.travelnbike.com/news/photo/201801/51893_66217_223.jpg" width = "100%"/>
                         </div>
                       </div>
                       <!-- Slide Three - Set the background image for this slide in the line below -->
                       <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
                         <div class="carousel-caption d-none d-md-block">
-                          <h3>Third Slide</h3>
-                          <p>This is a description for the third slide.</p>
+                          <img src = "https://fimg4.pann.com/new/download.jsp?FileID=44667377" width = "100%"/>
                         </div>
                       </div>
                     </div>
