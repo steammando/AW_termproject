@@ -16,6 +16,11 @@
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/modern-business.css" rel="stylesheet">
+    
+    <style>
+        select {width: 200px;
+                font-size: 8px;}
+    </style>
 
 </head>
 
@@ -38,7 +43,7 @@
                     <a href="#">내 투표 관리</a>
                 </li>
                 <li>
-                    <a href="#">진행중인 투표</a>
+                    <a  data-toggle="modal" data-target=".bd-example-modal-lg" href= "#">진행중인 투표</a> 
                 </li>
             </ul>
         </div>
@@ -58,7 +63,46 @@
 
                   </div>
                 </nav>
-                
+                <!-- Popup in-progress vote -->
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                              <!-- header -->
+                                
+                              <div class="modal-header">
+                                <!-- header title -->
+                                <h4 class="modal-title" >진행중인 투표</h4>
+                                
+                              </div>
+                              <!-- body -->
+                              <div class="modal-body">
+                                    태그를 입력해주세요.<br/>
+                                    <input type="text" placeholder="# vote code"/> <br><br>
+                                    <select>
+                                        <option value="default" selected="true">내 투표를 선택해 주세요</option>
+                                        <option value = "vote 1">vote 1</option>
+                                        <option value = "vote 2">vote 2</option>
+                                        <option value = "vote 3">vote 3</option>
+                                        <option value = "vote 4">vote 4</option>
+                                    </select> <br>
+                                    
+                                    <select>
+                                        <option value = "default" selected="true">내가 참여한 투표를 선택해 주세요.</option>
+                                        <option value = "vote 1">vote 1</option>
+                                        <option value = "vote 2">vote 2</option>
+                                        <option value = "vote 3">vote 3</option>
+                                        <option value = "vote 4">vote 4</option>
+                                    </select>
+                                  
+                              </div>
+                              <!-- Footer -->
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
                 <header>
                   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
