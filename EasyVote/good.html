@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>awesome bootstrap checkbox demo</title>
+    
+</head>
+<body>
+<div class="container">
+    <h2>Checkboxes</h2>
+    <form role="form">
+        <div class="row">
+            <div class="col-md-4">
+                <fieldset>
+                    <legend>
+                        Basic
+                    </legend>
+                    <p>
+                        Supports bootstrap brand colors: <code>.checkbox-primary</code>, <code>.checkbox-info</code> etc.
+                    </p>
+                    <div class="checkbox">
+                        <input id="checkbox1" class="styled" type="checkbox">
+                        <label for="checkbox1">
+                            Default
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-primary">
+                        <input id="checkbox2" class="styled" type="checkbox" checked>
+                        <label for="checkbox2">
+                            Primary
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-success">
+                        <input id="checkbox3" class="styled" type="checkbox">
+                        <label for="checkbox3">
+                            Success
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-info">
+                        <input id="checkbox4" class="styled" type="checkbox">
+                        <label for="checkbox4">
+                            Info
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-warning">
+                        <input id="checkbox5" type="checkbox" class="styled" checked>
+                        <label for="checkbox5">
+                            Warning
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-danger">
+                        <input id="checkbox6" type="checkbox" class="styled" checked>
+                        <label for="checkbox6">
+                            Check me out
+                        </label>
+                    </div>
+                    <p>Checkboxes without label text</p>
+                    <div class="checkbox">
+                        <input type="checkbox" class="styled" id="singleCheckbox1" value="option1" aria-label="Single checkbox One">
+                        <label></label>
+                    </div>
+                    <div class="checkbox checkbox-primary">
+                        <input type="checkbox" class="styled styled-primary" id="singleCheckbox2" value="option2" checked aria-label="Single checkbox Two">
+                        <label></label>
+                    </div>
+                    <p>Inline checkboxes</p>
+                    <div class="checkbox checkbox-inline">
+                        <input type="checkbox" class="styled" id="inlineCheckbox1" value="option1">
+                        <label for="inlineCheckbox1"> Inline One </label>
+                    </div>
+                    <div class="checkbox checkbox-success checkbox-inline">
+                        <input type="checkbox" class="styled" id="inlineCheckbox2" value="option1" checked>
+                        <label for="inlineCheckbox2"> Inline Two </label>
+                    </div>
+                    <div class="checkbox checkbox-inline">
+                        <input type="checkbox" class="styled" id="inlineCheckbox3" value="option1">
+                        <label for="inlineCheckbox3"> Inline Three </label>
+                    </div>
+                    <br/><br/>
+                </fieldset>
+            </div>
+            <div class="col-md-4">
+                <fieldset>
+                    <legend>
+                        Circled
+                    </legend>
+                    <p>
+                        <code>.checkbox-circle</code> for roundness.
+                    </p>
+                    <div class="checkbox checkbox-circle">
+                        <input id="checkbox7" class="styled" type="checkbox">
+                        <label for="checkbox7">
+                            Simply Rounded
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-info checkbox-circle">
+                        <input id="checkbox8" class="styled" type="checkbox" checked>
+                        <label for="checkbox8">
+                            Me too
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="col-md-4">
+                <fieldset>
+                    <legend>
+                        Disabled
+                    </legend>
+                    <p>
+                        Disabled state also supported.
+                    </p>
+                    <div class="checkbox">
+                        <input class="styled" id="checkbox9" type="checkbox" disabled>
+                        <label for="checkbox9">
+                            Can't check this
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-success">
+                        <input class="styled styled" id="checkbox10" type="checkbox" disabled checked>
+                        <label for="checkbox10">
+                            This too
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-warning checkbox-circle">
+                        <input class="styled" id="checkbox11" type="checkbox" disabled checked>
+                        <label for="checkbox11">
+                            And this
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <fieldset>
+                    <legend>
+                        Sizing
+                    </legend>
+                    <p>
+                        Supports bootstrap sizing class: <code>.checkbox-sm</code>, <code>.checkbox-md</code>, <code>.checkbox-lg</code>.
+                    </p>
+                    <div class="checkbox checkbox-inline checkbox-sm">
+                        <input type="checkbox" class="styled" id="inlineCheckbox1smd" value="option1" disabled>
+                        <label for="inlineCheckbox1smd"> Disabled small </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-circle checkbox-sm">
+                        <input type="checkbox" class="styled" id="inlineCheckbox1smc" value="option1">
+                        <label for="inlineCheckbox1smc"> Circled small </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-primary checkbox-sm">
+                        <input type="checkbox" class="styled" id="inlineCheckbox2sm" value="option2">
+                        <label for="inlineCheckbox2sm"> Primary small </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-success checkbox-sm">
+                        <input type="checkbox" class="styled" id="inlineCheckbox3sm" value="option3">
+                        <label for="inlineCheckbox3sm"> Success small </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-info checkbox-sm">
+                        <input type="checkbox" class="styled" id="inlineCheckbox4sm" value="option4">
+                        <label for="inlineCheckbox4sm"> Info small </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-warning checkbox-sm">
+                        <input type="checkbox" class="styled" id="inlineCheckbox5sm" value="option5">
+                        <label for="inlineCheckbox5sm"> Warning small </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-danger checkbox-sm">
+                        <input type="checkbox" class="styled" id="inlineCheckbox6sm" value="option6">
+                        <label for="inlineCheckbox6sm"> Danger small </label>
+                    </div>
+                    <br/><br/>
+                    <div class="checkbox checkbox-inline checkbox-md">
+                        <input type="checkbox" class="styled" id="inlineCheckbox1mdd" value="option1" disabled>
+                        <label for="inlineCheckbox1mdd"> Disabled medium </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-circle checkbox-md">
+                        <input type="checkbox" class="styled" id="inlineCheckbox1mdc" value="option1">
+                        <label for="inlineCheckbox1mdc"> Circled medium </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-primary checkbox-md">
+                        <input type="checkbox" class="styled" id="inlineCheckbox2md" value="option2">
+                        <label for="inlineCheckbox2md"> Primary </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-success checkbox-md">
+                        <input type="checkbox" class="styled" id="inlineCheckbox3md" value="option3">
+                        <label for="inlineCheckbox3md"> Success medium </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-info checkbox-md">
+                        <input type="checkbox" class="styled" id="inlineCheckbox4md" value="option4">
+                        <label for="inlineCheckbox4md"> Info medium </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-warning checkbox-md">
+                        <input type="checkbox" class="styled" id="inlineCheckbox5md" value="option5">
+                        <label for="inlineCheckbox5md"> Warning medium </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-danger checkbox-md">
+                        <input type="checkbox" class="styled" id="inlineCheckbox6md" value="option6">
+                        <label for="inlineCheckbox6md"> Danger medium </label>
+                    </div>
+                    <br/><br/>
+                    <div class="checkbox checkbox-inline checkbox-lg">
+                        <input type="checkbox" class="styled" id="inlineCheckbox1lgd" value="option1" disabled>
+                        <label for="inlineCheckbox1lgd"> Disabled large </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-circle checkbox-lg">
+                        <input type="checkbox" class="styled" id="inlineCheckbox1lgc" value="option1">
+                        <label for="inlineCheckbox1lgc"> Circled large </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-primary checkbox-lg">
+                        <input type="checkbox" class="styled" id="inlineCheckbox2lg" value="option2">
+                        <label for="inlineCheckbox2lg"> Primary large </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-success checkbox-lg">
+                        <input type="checkbox" class="styled" id="inlineCheckbox3lg" value="option3">
+                        <label for="inlineCheckbox3lg"> Success large </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-info checkbox-lg">
+                        <input type="checkbox" class="styled" id="inlineCheckbox4lg" value="option4">
+                        <label for="inlineCheckbox4lg"> Info large </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-warning checkbox-lg">
+                        <input type="checkbox" class="styled" id="inlineCheckbox5lg" value="option5">
+                        <label for="inlineCheckbox5lg"> Warning large </label>
+                    </div>
+                    <div class="checkbox checkbox-inline checkbox-danger checkbox-lg">
+                        <input type="checkbox" class="styled" id="inlineCheckbox6lg" value="option6">
+                        <label for="inlineCheckbox6lg"> Danger large </label>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </form>
+    <br/><br/>
+    <h2>Radios</h2>
+    <form role="form">
+        <div class="row">
+            <div class="col-md-4">
+                <fieldset>
+                    <legend>
+                        Basic
+                    </legend>
+                    <p>
+                        Supports bootstrap brand colors: <code>.radio-primary</code>, <code>.radio-danger</code> etc.
+                    </p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="radio">
+                                <input type="radio" name="radio1" id="radio1" value="option1" checked>
+                                <label for="radio1">
+                                    Small
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="radio1" id="radio2" value="option2">
+                                <label for="radio2">
+                                    Big
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="radio radio-danger">
+                                <input type="radio" name="radio2" id="radio3" value="option1">
+                                <label for="radio3">
+                                    Next
+                                </label>
+                            </div>
+                            <div class="radio radio-danger">
+                                <input type="radio" name="radio2" id="radio4" value="option2" checked>
+                                <label for="radio4">
+                                    One
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Radios without label text</p>
+                    <div class="radio">
+                        <input type="radio" id="singleRadio1" value="option1" name="radioSingle1" aria-label="Single radio One">
+                        <label></label>
+                    </div>
+                    <div class="radio radio-success">
+                        <input type="radio" id="singleRadio2" value="option2" name="radioSingle1" checked aria-label="Single radio Two">
+                        <label></label>
+                    </div>
+                    <p>Inline radios</p>
+                    <div class="radio radio-info radio-inline">
+                        <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked>
+                        <label for="inlineRadio1"> Inline One </label>
+                    </div>
+                    <div class="radio radio-inline">
+                        <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                        <label for="inlineRadio2"> Inline Two </label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="col-md-4">
+                <fieldset>
+                    <legend>
+                        Disabled
+                    </legend>
+                    <p>
+                        Disabled state also supported.
+                    </p>
+                    <div class="radio radio-danger">
+                        <input type="radio" name="radio3" id="radio5" value="option1" disabled>
+                        <label for="radio5">
+                            Next
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="radio3" id="radio6" value="option2" checked disabled>
+                        <label for="radio6">
+                            One
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="col-md-4">
+                <fieldset>
+                    <legend>
+                        As Checkboxes
+                    </legend>
+                    <p>
+                        Radios can be made to look like checkboxes.
+                    </p>
+                    <div class="checkbox checkbox">
+                        <input type="radio" name="radio4" id="radio7" value="option1" checked>
+                        <label for="radio7">
+                            Defeault
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-success">
+                        <input type="radio" name="radio4" id="radio8" value="option2">
+                        <label for="radio8">
+                            Success
+                        </label>
+                    </div>
+                    <div class="checkbox checkbox-danger">
+                        <input type="radio" name="radio4" id="radio9" value="option3">
+                        <label for="radio9">
+                            Danger
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-md-12">
+                <fieldset>
+                    <legend>
+                        Sizing
+                    </legend>
+                    <p>
+                        Supports bootstrap sizing class: <code>.radio-sm</code>, <code>.radio-md</code>, <code>.radio-lg</code>.
+                    </p>
+                    <div class="radio radio-inline radio-sm">
+                        <input type="radio" id="inlineRadio1smd" value="option1" name="radioInlineSm" disabled>
+                        <label for="inlineRadio1smd"> Disabled small </label>
+                    </div>
+                    <div class="checkbox checkbox-sm checkbox-inline">
+                        <input type="radio" id="inlineRadio1sms" value="option2" name="radioInlineSm">
+                        <label for="inlineRadio1sms"> Squared small </label>
+                        &nbsp;&nbsp;
+                    </div>
+                    <div class="radio radio-inline radio-primary radio-sm">
+                        <input type="radio" id="inlineRadio2sm" value="option3" name="radioInlineSm">
+                        <label for="inlineRadio2sm"> Primary small </label>
+                    </div>
+                    <div class="radio radio-inline radio-success radio-sm">
+                        <input type="radio" id="inlineRadio3sm" value="option3" name="radioInlineSm">
+                        <label for="inlineRadio3sm"> Success small </label>
+                    </div>
+                    <div class="radio radio-inline radio-info radio-sm">
+                        <input type="radio" id="inlineRadio4sm" value="option3" name="radioInlineSm">
+                        <label for="inlineRadio4sm"> Info small </label>
+                    </div>
+                    <div class="radio radio-inline radio-warning radio-sm">
+                        <input type="radio" id="inlineRadio5sm" value="option3" name="radioInlineSm">
+                        <label for="inlineRadio5sm"> Warning small </label>
+                    </div>
+                    <div class="radio radio-inline radio-danger radio-sm">
+                        <input type="radio" id="inlineRadio6sm" value="option3" name="radioInlineSm">
+                        <label for="inlineRadio6sm"> Danger small </label>
+                    </div>
+                    <br/><br/>
+                    <div class="radio radio-inline radio-md">
+                        <input type="radio" id="inlineRadio1mdd" value="option1" name="radioInlineMd" disabled>
+                        <label for="inlineRadio1mdd"> Disabled medium </label>
+                    </div>
+                    <div class="checkbox checkbox-md checkbox-inline">
+                        <input type="radio" id="inlineRadio1mds" value="option2" name="radioInlineMd">
+                        <label for="inlineRadio1mds"> Squared medium </label>
+                        &nbsp;&nbsp;
+                    </div>
+                    <div class="radio radio-inline radio-primary radio-md">
+                        <input type="radio" id="inlineRadio2md" value="option3" name="radioInlineMd">
+                        <label for="inlineRadio2md"> Primary medium </label>
+                    </div>
+                    <div class="radio radio-inline radio-success radio-md">
+                        <input type="radio" id="inlineRadio3md" value="option3" name="radioInlineMd">
+                        <label for="inlineRadio3md"> Success medium </label>
+                    </div>
+                    <div class="radio radio-inline radio-info radio-md">
+                        <input type="radio" id="inlineRadio4md" value="option3" name="radioInlineMd">
+                        <label for="inlineRadio4md"> Info medium </label>
+                    </div>
+                    <div class="radio radio-inline radio-warning radio-md">
+                        <input type="radio" id="inlineRadio5md" value="option3" name="radioInlineMd">
+                        <label for="inlineRadio5md"> Warning medium </label>
+                    </div>
+                    <div class="radio radio-inline radio-danger radio-md">
+                        <input type="radio" id="inlineRadio6md" value="option3" name="radioInlineMd">
+                        <label for="inlineRadio6md"> Danger medium </label>
+                    </div>
+                    <br/><br/>
+                    <div class="radio radio-inline radio-lg">
+                        <input type="radio" id="inlineRadio1lgd" value="option1" name="radioInlineLg" disabled>
+                        <label for="inlineRadio1lgd"> Disabled large </label>
+                    </div>
+                    <div class="checkbox checkbox-lg checkbox-inline">
+                        <input type="radio" id="inlineRadio1lgs" value="option2" name="radioInlineLg">
+                        <label for="inlineRadio1lgs"> Squared large </label>
+                        &nbsp;&nbsp;
+                    </div>
+                    <div class="radio radio-inline radio-primary radio-lg">
+                        <input type="radio" id="inlineRadio2lg" value="option3" name="radioInlineLg">
+                        <label for="inlineRadio2lg"> Primary large </label>
+                    </div>
+                    <div class="radio radio-inline radio-success radio-lg">
+                        <input type="radio" id="inlineRadio3lg" value="option3" name="radioInlineLg">
+                        <label for="inlineRadio3lg"> Success large </label>
+                    </div>
+                    <div class="radio radio-inline radio-info radio-lg">
+                        <input type="radio" id="inlineRadio4lg" value="option3" name="radioInlineLg">
+                        <label for="inlineRadio4lg"> Info large </label>
+                    </div>
+                    <div class="radio radio-inline radio-warning radio-lg">
+                        <input type="radio" id="inlineRadio5lg" value="option3" name="radioInlineLg">
+                        <label for="inlineRadio5lg"> Warning large </label>
+                    </div>
+                    <div class="radio radio-inline radio-danger radio-lg">
+                        <input type="radio" id="inlineRadio6lg" value="option3" name="radioInlineLg">
+                        <label for="inlineRadio6lg"> Danger large </label>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </form>
+    <br/><br/><br/><br/>
+</div>
+</body>
+</html>
