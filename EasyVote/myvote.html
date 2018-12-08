@@ -16,16 +16,27 @@
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/modern-business.css" rel="stylesheet">
+    <link href="css/checkbox.css" rel="stylesheet">
+    
     <script src="https://www.chartjs.org/dist/2.7.3/Chart.bundle.js"></script>
     <script src = "https://www.chartjs.org/samples/latest/utils.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <style>
         select {width: 200px;
                 font-size: 10px;}
+        
         canvas {
 		-moz-user-select: none;
 		-webkit-user-select: none;
 		-ms-user-select: none;
 	}
+        input {
+            border-left : 0px;
+            border-right : 0px;
+            border-top : 0px;
+            border-color : deepskyblue;
+        }
     </style>
 
 </head>
@@ -43,13 +54,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">내 투표 만들기</a>
+                    <a  data-toggle="modal" data-target=".create-new-vote" href= "#">새 투표 만들기</a>
                 </li>
                 <li>
                     <a href="#">내 투표 관리</a>
                 </li>
                 <li>
-                    <a  data-toggle="modal" data-target=".bd-example-modal-lg" href= "#">진행중인 투표</a> 
+                    <a  data-toggle="modal" data-target=".inprogress-vote" href= "#">진행중인 투표</a> 
                 </li>
             </ul>
         </div>
@@ -70,7 +81,7 @@
                   </div>
                 </nav>
                 <!-- Popup in-progress vote -->
-                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal fade inprogress-vote" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                               <!-- header -->
@@ -154,6 +165,62 @@
                                     </td>
                                   </tr>
                                 </table>
+                              <!-- Footer -->
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                
+                <!--create new vote popup-->
+                <div class="modal fade create-new-vote" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                              <!-- header -->
+                                
+                              <div class="modal-header">
+                                <!-- header title -->
+                                <h4 class="modal-title" >새 투표 만들기</h4>
+                                
+                              </div>
+                              <!-- body -->
+                                <div class = "modal-body" >
+                                    
+                                    <span>제목 : <input type = "text" style = "width=200px;" /></span><br><br>
+                                    <span>항목 : </span> 
+                                   
+                                    <div class="col-md-6">
+
+                                        <div class="funkyradio" >
+                                            <div class="funkyradio-default" style="height=20px">
+                                                <input type="checkbox" name="checkbox" id="checkbox1" checked/>
+                                                <label for="checkbox1">First Option</label>
+                                            </div>
+                                            <div class="funkyradio-primary">
+                                                <input type="checkbox" name="checkbox" id="checkbox2" checked/>
+                                                <label for="checkbox2">Second Option</label>
+                                            </div>
+                                            <div class="funkyradio-success">
+                                                <input type="checkbox" name="checkbox" id="checkbox3" checked/>
+                                                <label for="checkbox3">Third Option</label>
+                                            </div>
+                                            <div class="funkyradio-danger">
+                                                <input type="checkbox" name="checkbox" id="checkbox4" checked/>
+                                                <label for="checkbox4">Fourth Option</label>
+                                            </div>
+                                            <div class="funkyradio-warning">
+                                                <input type="checkbox" name="checkbox" id="checkbox5" checked/>
+                                                <label for="checkbox5">Fifth Option</label>
+                                            </div>
+                                            <div class="funkyradio-info">
+                                                <input type="checkbox" name="checkbox" id="checkbox6" checked/>
+                                                <label for="checkbox6">Sixth Option</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                               <!-- Footer -->
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
