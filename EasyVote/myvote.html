@@ -11,12 +11,12 @@
     <title>EVER VOTE</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/static/css/simple-sidebar.css" rel="stylesheet">
-    <link href="/static/css/modern-business.css" rel="stylesheet">
-    <link href="/static/css/checkbox.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="css/checkbox.css" rel="stylesheet">
     
     
     <script src="https://www.chartjs.org/dist/2.7.3/Chart.bundle.js"></script>
@@ -120,13 +120,7 @@
                                     <td>
                                        
                                 
-                                    <select>
-                                        <option selected="selected" value="default">제목</option>
-                                        <option value="vote 1">vote 1</option>
-                                        <option value="vote 2">vote 2</option>
-                                        <option value="vote 3">vote 3</option>
-                                        <option value="vote 4">vote 4</option>
-                                    </select> 
+                                    
                                         <div id="container" class = "modal-body">
                                     <canvas id="canvas"></canvas>
                                         </div>
@@ -136,7 +130,7 @@
                                         <button onclick = "stop(1)">Minus First Data</button>
                                         <button onclick="stop(2)">Minus Second Data</button>
                                         <button  onclick="stop(3)">Minus Third Data</button>
-                                        <script src="/static/javascript/highChart.js"></script>
+                                        <script src="javascript/highChart.js"></script>
                                     </td>
                                   </tr>
                                 </table>
@@ -167,36 +161,42 @@
                                     
                                     <span>제목 : <input type = "text" style = "width=200px;"  placeholder = "투표 제목"/></span><br><br>
                                     <span>항목 : </span> 
-                                   
-                                    <div class="col-md-6">
-
+                                   <form name="checkVote" class="col-md-6">
+                                    
                                         <div class="funkyradio" >
                                             <div class="funkyradio-default" style ="width = 100px">
                                                 <input type="checkbox" name="checkbox" id="checkbox1" checked/>
-                                                <label for="checkbox1">First Option</label>
+                                                <label for="checkbox1"><input type="text" style= "width : 70%"/></label>
+                                                <button>add</button>
                                             </div>
                                             <div class="funkyradio-primary">
                                                 <input type="checkbox" name="checkbox" id="checkbox2" checked/>
-                                                <label for="checkbox2">Second Option</label>
+                                                <label for="checkbox1"><input type="text" style= "width : 70%"/></label>
+                                                <button>add</button>
                                             </div>
                                             <div class="funkyradio-success">
                                                 <input type="checkbox" name="checkbox" id="checkbox3" checked/>
-                                                <label for="checkbox3">Third Option</label>
+                                                <label for="checkbox1"><input type="text" style= "width : 70%"/></label>
+                                                <button>add</button>
                                             </div>
                                             <div class="funkyradio-danger">
                                                 <input type="checkbox" name="checkbox" id="checkbox4" checked/>
-                                                <label for="checkbox4">Fourth Option</label>
+                                                <label for="checkbox1"><input type="text" style= "width : 70%"/></label>
+                                                <button>add</button>
                                             </div>
                                             <div class="funkyradio-warning">
                                                 <input type="checkbox" name="checkbox" id="checkbox5" checked/>
-                                                <label for="checkbox5">Fifth Option</label>
+                                                <label for="checkbox1"><input type="text" style= "width : 70%"/></label>
+                                                <button>add</button>
                                             </div>
                                             <div class="funkyradio-info">
                                                 <input type="checkbox" name="checkbox" id="checkbox6" checked/>
-                                                <label for="checkbox6">Sixth Option</label>
+                                                <label for="checkbox1"><input type="text" style= "width : 70%"/></label>
+                                                <button>add</button>
                                             </div>
                                         </div>
-                                    </div>
+                                   
+                                </form>
                                 </div>
                                 </td>
                                 <td>
@@ -209,7 +209,7 @@
                                     <label class = "container">   항목 추가 가능 <input type="checkbox" checked="checked">
                                               <span class="checkmark"></span></label><br><br>
                                     
-                                    <a href="/static/myvote.html"><img src="http://www.pngmart.com/files/3/Submit-Button-PNG-Clipart.png" width="130px" /></a>
+                                    <a href="myvote.html"><img src="http://www.pngmart.com/files/3/Submit-Button-PNG-Clipart.png" width="130px" /></a>
                                 
                                 </div>
                                 </td>
@@ -269,8 +269,8 @@
     <!-- /#wrapper -->
 
     <!-- Bootstrap core JavaScript -->
-    <script src="/static/vendor/jquery/jquery.min.js" ></script>
-    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js" ></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Menu Toggle Script -->
     <script src="javascript/menuToggleScript.js"></script>
