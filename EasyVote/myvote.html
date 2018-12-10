@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>EVER Vote</title>
+    <title>EVER VOTE</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,11 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+     <script src="http://code.highcharts.com/highcharts.js"></script>
+     <script src="http://code.highcharts.com/modules/exporting.js"></script>
+  
     <style>
         select {width: 200px;
                 font-size: 10px;}
@@ -79,7 +83,7 @@
                 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
                   <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle"><img src = "https://cdn2.iconfinder.com/data/icons/ui-icon-part-2/128/navigation-512.png" width = "25"/></a>
                   <div class="container">
-                    <a class="navbar-brand" href="main.html" >EASY VOTE</a>
+                    <a class="navbar-brand" href="myvote.html" style="text-indent : 450px; font-family: inherit" >EVER VOTE</a>
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -120,7 +124,7 @@
                                     </td>
                                     <td>
                                        
-                                <div id="container" style="width: 75%;" class = "modal-body">
+                                
                                     <select>
                                         <option selected="selected" value="default">제목</option>
                                         <option value="vote 1">vote 1</option>
@@ -128,147 +132,16 @@
                                         <option value="vote 3">vote 3</option>
                                         <option value="vote 4">vote 4</option>
                                     </select> 
+                                        <div id="container" class = "modal-body">
                                     <canvas id="canvas"></canvas>
                                         </div>
-                                        <button id="randomizeData">Randomize Data</button>
-                                        <button id="addDataset">Add Dataset</button>
-                                        <button id="removeDataset">Remove Dataset</button>
-                                        <button id="addData">Add Data</button>
-                                        <button id="removeData">Remove Data</button>
-                                        <script>
-                                            var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-                                            var color = Chart.helpers.color;
-                                            var barChartData = {
-                                                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                                                datasets: [{
-                                                    label: 'Dataset 1',
-                                                    backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
-                                                    borderColor: window.chartColors.red,
-                                                    borderWidth: 1,
-                                                    data: [
-                                                        randomScalingFactor(),
-                                                        randomScalingFactor(),
-                                                        randomScalingFactor(),
-                                                        randomScalingFactor(),
-                                                        randomScalingFactor(),
-                                                        randomScalingFactor(),
-                                                        randomScalingFactor()
-                                                    ]
-                                                }, {
-                                                    label: 'Dataset 2',
-                                                    backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
-                                                    borderColor: window.chartColors.blue,
-                                                    borderWidth: 1,
-                                                    data: [
-                                                        randomScalingFactor(),
-                                                        randomScalingFactor(),
-                                                        randomScalingFactor(),
-                                                        randomScalingFactor(),
-                                                        randomScalingFactor(),
-                                                        randomScalingFactor(),
-                                                        randomScalingFactor()
-                                                    ]
-                                                }]
-
-                                            };
-
-                                            window.onload = function() {
-                                                var ctx = document.getElementById('canvas').getContext('2d');
-                                                window.myBar = new Chart(ctx, {
-                                                    type: 'bar',
-                                                    data: barChartData,
-                                                    options: {
-                                                        responsive: true,
-                                                        legend: {
-                                                            position: 'top',
-                                                        },
-                                                        title: {
-                                                            display: true,
-                                                            text: 'Chart.js Bar Chart'
-                                                        }
-                                                    }
-                                                });
-
-                                            };
-
-                                            var el = document.getElementById('randomizeData');
-                                            if(el) {
-                                                el.addEventListener('click', function() {
-                                                var zero = Math.random() < 0.2 ? true : false;
-                                                barChartData.datasets.forEach(function(dataset) {
-                                                    dataset.data = dataset.data.map(function() {
-                                                        return zero ? 0.0 : randomScalingFactor();
-                                                    });
-
-                                                });
-                                                window.myBar.update();
-                                            });
-                                            }
-
-                                            var colorNames = Object.keys(window.chartColors);
-                                            var el2 = document.getElementById('addDataset');
-                                            if(el2) {
-                                                    el2.addEventListener('click', function() {
-                                                    var colorName = colorNames[barChartData.datasets.length % colorNames.length];
-                                                    var dsColor = window.chartColors[colorName];
-                                                    var newDataset = {
-                                                        label: 'Dataset ' + (barChartData.datasets.length + 1),
-                                                        backgroundColor: color(dsColor).alpha(0.5).rgbString(),
-                                                        borderColor: dsColor,
-                                                        borderWidth: 1,
-                                                        data: []
-                                                    };
-
-                                                    for (var index = 0; index < barChartData.labels.length; ++index) {
-                                                        newDataset.data.push(randomScalingFactor());
-                                                    }
-
-                                                    barChartData.datasets.push(newDataset);
-                                                    window.myBar.update();
-                                                });
-                                            }
-                                            
-                                            var el3 = document.getElementById('addData');
-
-                                            if(el3) {
-                                                    el3.addEventListener('click', function() {
-                                                    if (barChartData.datasets.length > 0) {
-                                                        var month = MONTHS[barChartData.labels.length % MONTHS.length];
-                                                        barChartData.labels.push(month);
-
-                                                        for (var index = 0; index < barChartData.datasets.length; ++index) {
-                                                            // window.myBar.addData(randomScalingFactor(), index);
-                                                            barChartData.datasets[index].data.push(randomScalingFactor());
-                                                        }
-
-                                                        window.myBar.update();
-                                                    }
-                                                });
-                                            }
-                                            
-                                            var el4 = document.getElementById('removeDataset');
-                                            if(el4) {
-                                                el4.addEventListener('click', function() {
-                                                    barChartData.datasets.pop();
-                                                    window.myBar.update();
-                                                });
-                                            }
-                                            
-                                            var el5 = document.getElementById('removeData');
-                                            if(el5) {
-                                                    el5.addEventListener('click', function() {
-                                                    barChartData.labels.splice(-1, 1); // remove the label first
-
-                                                    barChartData.datasets.forEach(function(dataset) {
-                                                        dataset.data.pop();
-                                                    });
-
-                                                    window.myBar.update();
-                                                });
-                                            }
-                                        </script>
-                                        
-                                       
+                                        <button onclick="start(1)" >Plus First Data</button>
+                                        <button onclick="start(2)">Plus Second Data</button>
+                                        <button  onclick="start(3)">Plus Third Data</button>
+                                        <button onclick = "stop(1)">Minus First Data</button>
+                                        <button onclick="stop(2)">Minus Second Data</button>
+                                        <button  onclick-="stop(3)">Minus Third Data</button>
+                                        <script src="javascript/highChart.js"></script>
                                     </td>
                                   </tr>
                                 </table>
@@ -401,16 +274,11 @@
     <!-- /#wrapper -->
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js" ></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+    <script src="javascript/menuToggleScript.js"></script>
 </body>
 
 </html>
