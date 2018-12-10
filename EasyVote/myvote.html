@@ -11,12 +11,12 @@
     <title>EVER VOTE</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="css/modern-business.css" rel="stylesheet">
-    <link href="css/checkbox.css" rel="stylesheet">
+    <link href="/static/css/simple-sidebar.css" rel="stylesheet">
+    <link href="/static/css/modern-business.css" rel="stylesheet">
+    <link href="/static/css/checkbox.css" rel="stylesheet">
     
     
     <script src="https://www.chartjs.org/dist/2.7.3/Chart.bundle.js"></script>
@@ -46,6 +46,9 @@
         }
         button {
             font-size : 10px;
+        }
+        .vote {
+            width :100%;
         }
     </style>
 
@@ -108,19 +111,11 @@
                                     <td>
                                 <div class="modal-body">태그를 입력해주세요.<br /> 
                                     <input type="text" width = "100px" placeholder="# 투표 코드" style="font-size:10px"/>
-                                    <button style="font-size:10px">입력</button><br /><br /><select>
-                                        <option selected="selected" value="default">내 투표를 선택해 주세요</option>
-                                        <option value="vote 1">vote 1</option>
-                                        <option value="vote 2">vote 2</option>
-                                        <option value="vote 3">vote 3</option>
-                                        <option value="vote 4">vote 4</option>
-                                    </select><br /><select>
-                                        <option selected="selected" value="default">내가 참여한 투표를 선택해 주세요.</option>
-                                        <option value="vote 1">vote 1</option>
-                                        <option value="vote 2">vote 2</option>
-                                        <option value="vote 3">vote 3</option>
-                                        <option value="vote 4">vote 4</option>
-                                    </select></div>
+                                    <button style="font-size:10px">입력</button><br /><br />
+                                    <button style="font-size:10px" class = "vote">내 투표 1</button>
+                                    <button style="font-size:10px" class = "vote">내 투표 2</button>
+                                    <button style="font-size:10px" class = "vote">내 투표 3</button>
+                                    </div>
                                     </td>
                                     <td>
                                        
@@ -141,7 +136,7 @@
                                         <button onclick = "stop(1)">Minus First Data</button>
                                         <button onclick="stop(2)">Minus Second Data</button>
                                         <button  onclick="stop(3)">Minus Third Data</button>
-                                        <script src="javascript/highChart.js"></script>
+                                        <script src="/static/javascript/highChart.js"></script>
                                     </td>
                                   </tr>
                                 </table>
@@ -214,7 +209,7 @@
                                     <label class = "container">   항목 추가 가능 <input type="checkbox" checked="checked">
                                               <span class="checkmark"></span></label><br><br>
                                     
-                                    <a href="myvote.html"><img src="http://www.pngmart.com/files/3/Submit-Button-PNG-Clipart.png" width="130px" /></a>
+                                    <a href="/static/myvote.html"><img src="http://www.pngmart.com/files/3/Submit-Button-PNG-Clipart.png" width="130px" /></a>
                                 
                                 </div>
                                 </td>
@@ -274,8 +269,8 @@
     <!-- /#wrapper -->
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js" ></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/vendor/jquery/jquery.min.js" ></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Menu Toggle Script -->
     <script src="javascript/menuToggleScript.js"></script>

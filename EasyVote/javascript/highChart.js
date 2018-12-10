@@ -88,7 +88,6 @@ var index = [10,10,10,10,10,10,10,10,10];
                                  color: '#92A8CD'
                                  } ,true,true,false);
             
-            
         }, 100); 
     } 
 
